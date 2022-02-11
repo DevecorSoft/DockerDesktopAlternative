@@ -1,0 +1,12 @@
+name: test volumes
+on:
+  push:
+    paths:
+      - "test-volume.sh"
+      - ".github/workflows/test-volume.yml"
+jobs:
+  test-host-paths-mounting:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - run: ./test-volume.sh

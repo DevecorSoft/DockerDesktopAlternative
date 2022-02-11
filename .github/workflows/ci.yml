@@ -1,0 +1,11 @@
+name: build
+on:
+  push:
+    paths:
+      - "install.sh"
+jobs:
+  test:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - run: ./install.sh

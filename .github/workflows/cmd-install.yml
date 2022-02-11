@@ -1,0 +1,11 @@
+name: install via curl
+on:
+  push:
+    paths:
+      - "install.sh"
+jobs:
+  install-via-curl:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - run: sh -c "$(curl -fsSL https://raw.githubusercontent.com/DevecorSoft/DockerDesktopAlternative/main/install.sh)"
